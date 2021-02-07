@@ -27,6 +27,8 @@ module.exports = {
   plugins: ["react", "react-native", "jest"],
   rules: {
     // 'name_of_rule': RULES.(action)
+    "react/prop-types": RULES.OFF,
+    "react/display-name": RULES.WARN,
     "no-unused-vars": RULES.WARN,
     "jest/no-disabled-tests": RULES.WARN,
     "jest/no-focused-tests": RULES.ERROR,
