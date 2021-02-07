@@ -1,29 +1,20 @@
 import "react-native-gesture-handler"
 import React from "react"
-import { Text, View } from "react-native"
+import { View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
-import Styles from "./App.style"
+import Styles from "./styles/AppStyles"
 import WithScreenDimensions from "./styles/ScreenStyles"
+import HomeScreen from "./screens/home/HomeScreen"
 
-const App = () => {
+const App = ({ styles }) => {
   return (
     <NavigationContainer>
-      <PruebaWith prueba="paco" />
+      <View style={styles.body}>
+        <View style={styles.container}>
+          <HomeScreen />
+        </View>
+      </View>
     </NavigationContainer>
   )
 }
-export default App
-
-const Prueba = (props) => {
-  console.log(props)
-  const styles = props.styles
-  return (
-    <View style={styles.body}>
-      <View style={styles.container}>
-        <Text>Open up App.js to sassstart working on your app!</Text>
-      </View>
-    </View>
-  )
-}
-
-const PruebaWith = WithScreenDimensions(Prueba, Styles)
+export default WithScreenDimensions(App, Styles)

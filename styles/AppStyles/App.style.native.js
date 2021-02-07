@@ -14,6 +14,7 @@ const desktop = {
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 5,
+    // boxShadow: "15px 15px 25px #ccc",
   },
 }
 const tabletPortrait = { ...desktop }

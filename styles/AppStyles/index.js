@@ -1,3 +1,5 @@
+import Styles from "./App.style"
+
 const desktop = {
   body: {
     flex: 1,
@@ -13,7 +15,7 @@ const desktop = {
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 5,
+    ...Styles.desktop.container,
   },
 }
 const tabletPortrait = { ...desktop }
@@ -28,8 +30,8 @@ const mobile = {
 }
 
 export default {
-  mobile,
+  desktop,
   tabletLandscape,
   tabletPortrait,
-  desktop,
+  mobile,
 }
