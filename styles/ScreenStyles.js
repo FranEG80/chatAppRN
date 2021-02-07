@@ -1,6 +1,6 @@
 import { SCREENS } from "../configs/constants"
 import React, { useState, useLayoutEffect } from "react"
-import { useWindowDimensions, StyleSheet } from "react-native"
+import { useWindowDimensions, StyleSheet, Platform } from "react-native"
 
 const WithScreenDimensions = (Component, Styles) => (props) => {
   const screenWidth = useWindowDimensions().width
@@ -25,11 +25,9 @@ WithScreenDimensions.displayName = "HookDimensions"
 
 export default WithScreenDimensions
 
-const handleSize = (width) =>
-  width <= 550
-    ? SCREENS.MOBILE
-    : width <= 900
-    ? SCREENS.TABLET_PORTRAIT
-    : width <= 1200
-    ? SCREENS.TABLET_LANDSCAPE
-    : SCREENS.DESKTOP
+const handleSize = (width) => {
+  if (width <= 525 || Platform.OS) return SCREENS.MOBILE
+  if (width <= 900) return SCREENS.TABLET_PORTRAIT
+  if (width <= 1200) return SCREENS.TABLET_LANDSCAPE
+  return SCREENS.DESKTOP
+}
