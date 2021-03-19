@@ -2,7 +2,7 @@ const desktop = {
   body: {},
   container: {
     borderRadius: 5,
-    boxShadow: "15px 15px 25px #ccc",
+    boxShadow: "15px 15px 25px",
   },
 }
 const tabletPortrait = { ...desktop }

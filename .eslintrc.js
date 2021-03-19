@@ -28,12 +28,13 @@ module.exports = {
   rules: {
     // 'name_of_rule': RULES.(action)
     "react/prop-types": RULES.OFF,
-    "react/display-name": RULES.WARN,
+    "react/display-name": RULES.OFF,
     "no-unused-vars": RULES.WARN,
     "jest/no-disabled-tests": RULES.WARN,
     "jest/no-focused-tests": RULES.ERROR,
     "jest/no-identical-title": RULES.ERROR,
     "jest/prefer-to-have-length": RULES.WARN,
     "jest/valid-expect": RULES.ERROR,
+    "react-native/no-inline-styles": RULES.OFF,
   },
 }
