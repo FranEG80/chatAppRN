@@ -35,7 +35,7 @@ const App = () => {
     MediaScreen,
     SettingScreen,
   ]
-
+  console.log(Styles[screen].container)
   return (
     <NavigationContainer theme={LightTheme}>
       {isLoading ? (

@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react"
-import {
-  Image,
-  Text,
-  View,
-  TouchableOpacity,
-  Alert,
-  Platform,
-} from "react-native"
+import { Image, Text, View, TouchableOpacity } from "react-native"
 import ActivityIndicator from "../../atomic/ActivityIndicator"
 import StackNavigator from "../../../navigators/StackNavigator"
 import { getUser } from "../../../user.service"
@@ -20,13 +13,9 @@ const UserProfile = ({ navigation }) => {
       headerRight: () => (
         <TouchableOpacity
           style={{ marginRight: 20 }}
-          onPress={() =>
-            Platform.OS === "web"
-              ? alert("edit profile")
-              : Alert("edit profile")
-          }
+          onPress={() => alert("edit profile")}
         >
-          <Icon name="pencil" size={32} />
+          <Icon name="pencil" font="FontAwesome" size={32} />
         </TouchableOpacity>
       ),
     })

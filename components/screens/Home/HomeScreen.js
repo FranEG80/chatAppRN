@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Text, View, TouchableOpacity } from "react-native"
+import { Button, Text, View } from "react-native"
 import StackNavigator from "../../../navigators/StackNavigator"
 
 const CompA = ({ navigation }) => (

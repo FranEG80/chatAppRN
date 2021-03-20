@@ -2,9 +2,12 @@ import React from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import Icon from "../../components/atomic/Icon"
 import { useTheme } from "@react-navigation/native"
+import { Platform, useWindowDimensions } from "react-native"
 
 const Tab = createBottomTabNavigator()
 const MainNavigator = ({ screens }) => {
+  const width = useWindowDimensions().width
+  console.log(width)
   const { colors } = useTheme()
   return (
     <Tab.Navigator
@@ -23,6 +26,7 @@ const MainNavigator = ({ screens }) => {
           borderStyle: "solid",
           width: 100,
         },
+        style: Platform.OS === "web" ? {} : { width },
         adaptive: false, // true coloca la etiqueta del icono a la derecha
       }}
       // tabBar para crear tu mismo el componente de la barra

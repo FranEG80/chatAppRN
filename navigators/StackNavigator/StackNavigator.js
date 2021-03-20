@@ -32,10 +32,10 @@ const StackNavigator = ({ screens }) => {
                         style={{ marginLeft: 20 }}
                         onPressOut={() => navigation.goBack()}
                       >
-                        <Icon name="arrow-back" size={32} />
+                        <Icon name="arrow-left" size={28} font="FontAwesome" />
                       </TouchableOpacity>
                     )
-                  : "",
+                  : () => <View style={{ width: 28 }} />,
                 //   headerTitle: "asdf",
               }
             }}
